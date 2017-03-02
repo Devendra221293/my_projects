@@ -1,0 +1,12 @@
+CREATE TABLE `registered_user` ( `user_id` INT(11) NOT NULL AUTO_INCREMENT , 
+`user_name` VARCHAR(30) NOT NULL , 
+`password` TEXT NOT NULL , 
+`name` VARCHAR(30) NOT NULL , 
+`last_name` VARCHAR(30) NOT NULL , 
+`primary_email` TEXT NOT NULL , 
+`primary_contact` TEXT NOT NULL , 
+`city` VARCHAR(30) NOT NULL , 
+PRIMARY KEY (`user_id`));
+
+
+
