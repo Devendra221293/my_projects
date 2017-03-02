@@ -7,36 +7,38 @@ include "db_connection.php";
 	 die("connection failed:" .$conn->connect_error);
  }
  
- //create array event_list	
-		$customer_list=array();
+ //create array 	
+ $customer_list=array();
 	
 	
-   //query for name
+ //query for user list
    if($search_text!="" ){
 	
-	 $sql="SELECT `customer_id`,`name`,`last_name`, `address`,`primary_contact`,`primary_email` FROM `registered_user` WHERE name LIKE '%$search_text%' OR last_name LIKE '%$search_text%' OR primary_email LIKE '%$search_text%' OR primary_contact LIKE '%$search_text%'";
-           
-    	
+	$sql="SELECT `customer_id`,`user_name`,`name`,`last_name`,`primary_email`,`primary_contact`,`city` FROM `registered_user`";
+	   
     	$result = mysqli_query($conn, $sql); 
-             if (mysqli_num_rows($result) > 0) {
+             
+	if (mysqli_num_rows($result) > 0) {
     	
     	while($row = mysqli_fetch_array($result)){
 	
 	$data=array();
 	$customer_id=$row['customer_id'];
+	$user_name=$row['user_name'];
 	$name=$row['name'];
 	$last_name=$row['last_name'];
-	$address=$row['address'];
-	$primary_contact=$row['primary_contact'];
 	$primary_email=$row['primary_email'];
+        $primary_contact=$row['primary_contact'];
+	$city=$row['city'];
 	
 	//assign values to array data
 		$data['customer_id']	  =     $customer_id;
+		$data['$user_name']	  =	$user_name;
 		$data['name']		  =	$name;
 		$data['last_name']        =	$last_name;
-		$data['address']	  =	$address;
 		$data['primary_contact']  =	$primary_contact;
 		$data['primary_email']	  =	$primary_email;
+		$data['city']	  	  =	$city;
 		
 	 
 		array_push($customer_list,$data);
