@@ -1,0 +1,5 @@
+INSERT INTO `reg_user`(`user_id`, `user_name`, `password`, `name`, `last_name`, `email`, `contact_number`, `city`)
+VALUES ('smith','Smith@123','Smith','John','smoth@gmail.com','0987654321','Pune')
+
+INSERT INTO `reg_user`(`user_id`, `user_name`, `password`, `name`, `last_name`, `email`, `contact_number`, `city`)
+VALUES ('Robert','Robert@123','Allen','Doe','alen@gmail.com','0987654322','Pune')
