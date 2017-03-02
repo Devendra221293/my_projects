@@ -14,7 +14,7 @@ if($_SESSION['email']) {
 		$.ajax
 			({
 			  type:"POST",
-			  url:"process_search.php",
+			  url:"process_list.php",
 			  success: function(result)
 			  {	  
                		  var data = $.parseJSON(result);
