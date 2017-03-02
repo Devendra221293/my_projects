@@ -32,17 +32,17 @@ include "db_connection.php";
 	//code to insert data
 	$sql_insert="INSERT INTO `registered_user`(`user_name`,`password`,`name`,`last_name`,`primary_email`,`primary_contact`,`city`)values('$user_name','$password','$name','$last_name','$primary_mail','$primary_contact','$city')";
  
-  $conn->query($sql_insert);
+        $conn->query($sql_insert);
   
  	}else{
 	
 	//query to update customer details
 	
-  $sql_update="UPDATE `registered_user` SET `name`='$name',`name`='$name',`last_name`='$last_name',`primary_contact`='$primary_contact',`primary_email`='$primary_mail',`city`='$city' WHERE customer_id='$customer_id'";
+        $sql_update="UPDATE `registered_user` SET `name`='$name',`name`='$name',`last_name`='$last_name',`primary_contact`='$primary_contact',`primary_email`='$primary_mail',`city`='$city' WHERE customer_id='$customer_id'";
   
-  $conn->query($sql_update);
+        $conn->query($sql_update);
  
-  header('Location:https://github.com/Devendra221293/my_projects/register.php');
+        header('Location:https://github.com/Devendra221293/my_projects/register.php');
 	 
  }
  ?>
