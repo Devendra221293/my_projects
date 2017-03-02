@@ -141,7 +141,7 @@ if($_SESSION['email']) {
 						var contact_number = $('#id_contact').val();
 						var city           = $('#id_city').val();
 					
-					
+			
 				//prevent form if fields are empty
 		  				if(name!="" && last_name!="" )
 		  				{
