@@ -35,7 +35,8 @@ if($_SESSION['email']) {
 			     
 			$.each(data,function(index){
 					  
-			     rows +="<tr><td>" + data[index].name +" "+  data[index].last_name + "</td><td>" + data[index].address+ "</td><td>" + data[index].primary_email+ "</td><td>" + data[index].primary_contact+ "</td><td><a href='http://www.corecotechnologies.com/roonak-crm/dashboard.php?customer_id="+ data[index].customer_id +"'><button type='button' id='editbtn' name='Edit' class='editbtn btn btn-primary glyphicon glyphicon-pencil' title='Edit'><span style='display:none;'>Edit</button></a></td></tr>";
+			     rows +="<tr><td>" + data[index].user_name +"<tr><td>" + data[index].name +" "+  data[index].last_name + "</td><td>" + data[index].address+ "</td><td>" + data[index].primary_email+ "</td><td>" + data[index].primary_contact+ "</td><td><a href='https://github.com/Devendra221293/my_projects/register.php?customer_id="+ data[index].customer_id +"'><button type='button' id='editbtn' name='Edit'  title='Edit'><span style='display:none;'>Edit</button></a></td><td><a href='https://github.com/Devendra221293/my_projects/process_delete.php?customer_id="+ data[index].customer_id +"'><button type='button' id='delete' name='delete' title='Delete'>	
+						</button></a></td></tr>";
 						
 			});
 				
@@ -46,6 +47,7 @@ if($_SESSION['email']) {
 					 
 		     } 
                  });
+
 	    });	
 </script>
        <table align="center" id="mytable" border="1px" class="table table-bordered table-hover table-responsive">
