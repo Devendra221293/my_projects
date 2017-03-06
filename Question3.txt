@@ -1,0 +1,10 @@
+SQL>SELECT D.Dname,COUNT(E.EmpNo)
+    FROM E.Employee JOIN D.Department
+    WHERE E.DeptNo=D.DeptNo
+    GROUP BY Dname;
+
+
+SQL>COLUMN Dname HEADING 'DEPARTMENT NAME';    
+
+SQL>COLUMN COUNT(E.EmpNo) HEADING 'NUMBER OF EMPLOYEE';
+    
