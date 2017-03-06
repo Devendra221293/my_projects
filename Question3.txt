@@ -1,3 +1,7 @@
+
+Question 3 answer given below >
+
+
 SQL>SELECT D.Dname,COUNT(E.EmpNo)
     FROM E.Employee JOIN D.Department
     WHERE E.DeptNo=D.DeptNo
